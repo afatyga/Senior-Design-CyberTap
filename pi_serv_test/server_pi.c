@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/socket.h>
 #include <stdlib.h>
 #include <netinet/in.h>
@@ -13,21 +14,21 @@ int main(int argc, char *argv[]) {
     opt = 1;
 
     //create socket
-    if ((serv_fd = socket(AF_INET, SOCK_STREAM, 0)) = 0) {
+    if ((serv_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         perror("Failure to set socket");
         exit(1);
     }
 
     //connecting socket
     if (setsockopt(serv_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEADDR, &opt, sizeof(opt))){
-        perror"Error attaching socket to port"
+        perror("Error attaching socket to port");
     }
 
-    address.sin_addr = AF_INET;
+    address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons (PORT);
 
-    if (bind(serv_fd, (struct sockaddr_in *)&address, sizeof(address))<0) {
+    if (bind(serv_fd, (struct sockaddr *)&address, sizeof(address))<0) {
         perror("Error in binding");
         exit(1);
     }
