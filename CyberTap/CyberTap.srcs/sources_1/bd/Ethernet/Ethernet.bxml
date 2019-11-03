@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="Ethernet" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1572716942"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1572716942"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1572716942"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1572716942"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1572800342"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1572800342"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1572800342"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1572800342"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Ethernet_microblaze_0_0\Ethernet_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
