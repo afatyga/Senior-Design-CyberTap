@@ -1,0 +1,60 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port eth_mdio_mdc -pg 1 -lvl 5 -x 1620 -y 520 -defaultsOSRD
+preplace port eth_rmii -pg 1 -lvl 5 -x 1620 -y 400 -defaultsOSRD
+preplace port diff_clock_rtl -pg 1 -lvl 0 -x 0 -y 890 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace portBus reset_rtl -pg 1 -lvl 5 -x 1620 -y 580 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 2 -x 750 -y 690 -defaultsOSRD
+preplace inst axi_ethernet_0 -pg 1 -lvl 1 -x 230 -y 540 -defaultsOSRD
+preplace inst mii_to_rmii_0 -pg 1 -lvl 2 -x 750 -y 400 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 3 -x 1180 -y 700 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 1 -x 230 -y 1030 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 230 -y 900 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 750 -y 860 -defaultsOSRD
+preplace inst axi_ethernet_0_dma -pg 1 -lvl 2 -x 750 -y 160 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 4 -x 1440 -y 260 -defaultsOSRD
+preplace inst reset_inv_0 -pg 1 -lvl 1 -x 230 -y 780 -defaultsOSRD
+preplace netloc microblaze_0_Clk 1 0 4 20 310 430 600 1060 410 1280
+preplace netloc clk_wiz_1_locked 1 1 1 N 900
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 1 2 510 960 990
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 1 1080 730n
+preplace netloc mdm_1_debug_sys_rst 1 1 1 500 880n
+preplace netloc axi_ethernet_0_dma_mm2s_prmry_reset_out_n 1 0 3 60 1100 NJ 1100 1040
+preplace netloc axi_ethernet_0_dma_mm2s_cntrl_reset_out_n 1 0 3 30 330 450J 510 1000
+preplace netloc axi_ethernet_0_dma_s2mm_prmry_reset_out_n 1 0 3 70 1110 NJ 1110 1030
+preplace netloc axi_ethernet_0_dma_s2mm_sts_reset_out_n 1 0 3 80 700 400J 590 990
+preplace netloc clk_wiz_1_clk_out2 1 0 2 40 350 390
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 0 4 50 340 470 970 1070 420 1290
+preplace netloc axi_ethernet_0_phy_rst_n 1 1 4 380 580 NJ 580 NJ 580 NJ
+preplace netloc reset_1 1 0 2 30 710 480J
+preplace netloc sys_clock_1 1 0 2 NJ 320 380J
+preplace netloc reset_inv_0_Res 1 0 2 80 720 380J
+preplace netloc axi_ethernet_0_mii 1 1 1 440 380n
+preplace netloc microblaze_0_dlmb_1 1 2 1 N 670
+preplace netloc microblaze_0_ilmb_1 1 2 1 N 690
+preplace netloc microblaze_0_debug 1 1 1 490 680n
+preplace netloc axi_ethernet_0_dma_M_AXIS_MM2S 1 0 3 60 360 460J 480 1020
+preplace netloc axi_ethernet_0_dma_M_AXIS_CNTRL 1 0 3 70 370 420J 320 1010
+preplace netloc axi_ethernet_0_m_axis_rxs 1 1 1 410 130n
+preplace netloc axi_ethernet_0_m_axis_rxd 1 1 1 400 110n
+preplace netloc axi_ethernet_0_mdio 1 1 4 NJ 520 NJ 520 NJ 520 N
+preplace netloc microblaze_0_M_AXI_DP 1 2 2 1050 180 NJ
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 0 5 80 380 420J 500 NJ 500 NJ 500 1600
+preplace netloc mii_to_rmii_0_RMII_PHY_M 1 2 3 NJ 400 NJ 400 NJ
+preplace netloc diff_clock_rtl_1 1 0 1 NJ 890
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 1 4 490 490 NJ 490 NJ 490 1590
+levelinfo -pg 1 0 230 750 1180 1440 1620
+pagesize -pg 1 -db -bbox -sgen -130 0 1770 1120
+"
+}
+{
+   "da_aeth_cnt":"1",
+   "da_axi4_cnt":"2",
+   "da_board_cnt":"8",
+   "da_clkrst_cnt":"1",
+   "da_mb_cnt":"1"
+}
