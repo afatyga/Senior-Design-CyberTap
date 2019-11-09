@@ -1,0 +1,26 @@
+16:44:24 **** Auto Build of configuration Debug for project ECHOPLSWORKFFS ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../ECHOPLSWORKFFS_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../ECHOPLSWORKFFS_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: ECHOPLSWORKFFS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ECHOPLSWORKFFS_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ECHOPLSWORKFFS.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: ECHOPLSWORKFFS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ECHOPLSWORKFFS.elf  |tee "ECHOPLSWORKFFS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3188	    320	   3108	   6616	   19d8	ECHOPLSWORKFFS.elf
+'Finished building: ECHOPLSWORKFFS.elf.size'
+' '
+
+16:44:26 Build Finished (took 2s.27ms)
+

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="X:/My Documents/SeniorDesign/CyberTap/CyberTap.xpr">
+<Project Version="7" Minor="40" Path="C:/SeniorDesign/CyberTap/CyberTap.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5cf7513c1e9f46998c97c25a9ac84bb1"/>
@@ -19,7 +19,7 @@
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="SimulatorLanguage" Val="Verilog"/>
     <Option Name="BoardPart" Val="digilentinc.com:nexys4_ddr:part0:1.1"/>
-    <Option Name="BoardPartRepoPaths" Val="C:/Users/evanlang/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store"/>
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../Users/evanlang/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -68,20 +68,38 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_axi_timer_0_0/microBlaze_axi_timer_0_0.xci">
-          <Proxy FileSetName="microBlaze_axi_timer_0_0"/>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_lmb_bram_0/microBlaze_lmb_bram_0.xci">
+          <Proxy FileSetName="microBlaze_lmb_bram_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_xbar_0/microBlaze_xbar_0.xci">
+          <Proxy FileSetName="microBlaze_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_axi_ethernetlite_0_0/microBlaze_axi_ethernetlite_0_0.xci">
           <Proxy FileSetName="microBlaze_axi_ethernetlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_axi_smc_0/microBlaze_axi_smc_0.xci">
-          <Proxy FileSetName="microBlaze_axi_smc_0"/>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_axi_timer_0_0/microBlaze_axi_timer_0_0.xci">
+          <Proxy FileSetName="microBlaze_axi_timer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_rst_mig_7series_0_81M_0/microBlaze_rst_mig_7series_0_81M_0.xci">
           <Proxy FileSetName="microBlaze_rst_mig_7series_0_81M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_xbar_0/microBlaze_xbar_0.xci">
-          <Proxy FileSetName="microBlaze_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_ilmb_bram_if_cntlr_0/microBlaze_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="microBlaze_ilmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_clk_wiz_1_0/microBlaze_clk_wiz_1_0.xci">
+          <Proxy FileSetName="microBlaze_clk_wiz_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_axi_uartlite_0_0/microBlaze_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="microBlaze_axi_uartlite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_mii_to_rmii_0_0/microBlaze_mii_to_rmii_0_0.xci">
+          <Proxy FileSetName="microBlaze_mii_to_rmii_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_axi_smc_0/microBlaze_axi_smc_0.xci">
+          <Proxy FileSetName="microBlaze_axi_smc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_dlmb_bram_if_cntlr_0/microBlaze_dlmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="microBlaze_dlmb_bram_if_cntlr_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_microblaze_0_0/microBlaze_microblaze_0_0.xci">
           <Proxy FileSetName="microBlaze_microblaze_0_0"/>
@@ -91,24 +109,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_mig_7series_0_0/microBlaze_mig_7series_0_0.xci">
           <Proxy FileSetName="microBlaze_mig_7series_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_dlmb_bram_if_cntlr_0/microBlaze_dlmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="microBlaze_dlmb_bram_if_cntlr_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_ilmb_bram_if_cntlr_0/microBlaze_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="microBlaze_ilmb_bram_if_cntlr_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_lmb_bram_0/microBlaze_lmb_bram_0.xci">
-          <Proxy FileSetName="microBlaze_lmb_bram_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_axi_uartlite_0_0/microBlaze_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="microBlaze_axi_uartlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_mii_to_rmii_0_0/microBlaze_mii_to_rmii_0_0.xci">
-          <Proxy FileSetName="microBlaze_mii_to_rmii_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microBlaze.bd" FileRelPathName="ip/microBlaze_clk_wiz_1_0/microBlaze_clk_wiz_1_0.xci">
-          <Proxy FileSetName="microBlaze_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/microBlaze/hdl/microBlaze_wrapper.v">
@@ -140,7 +140,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../../../Downloads/Nexys4DDR_Master.xdc">
+      <File Path="X:/Downloads/Nexys4DDR_Master.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -182,20 +182,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_3/bd_9d5e_0_c_counter_binary_0_0.xci">
-          <Proxy FileSetName="bd_9d5e_0_c_counter_binary_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_1/bd_9d5e_0_mac_0.xci">
-          <Proxy FileSetName="bd_9d5e_0_mac_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_2/bd_9d5e_0_c_shift_ram_0_0.xci">
-          <Proxy FileSetName="bd_9d5e_0_c_shift_ram_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_5/bd_9d5e_0_util_vector_logic_0_0.xci">
           <Proxy FileSetName="bd_9d5e_0_util_vector_logic_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_0/bd_9d5e_0_eth_buf_0.xci">
           <Proxy FileSetName="bd_9d5e_0_eth_buf_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_1/bd_9d5e_0_mac_0.xci">
+          <Proxy FileSetName="bd_9d5e_0_mac_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_3/bd_9d5e_0_c_counter_binary_0_0.xci">
+          <Proxy FileSetName="bd_9d5e_0_c_counter_binary_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="axi_ethernet_1.xci" FileRelPathName="ip/ip_2/bd_9d5e_0_c_shift_ram_0_0.xci">
+          <Proxy FileSetName="bd_9d5e_0_c_shift_ram_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <Config>
@@ -402,9 +402,7 @@
     </Run>
     <Run Id="microBlaze_axi_timer_0_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_axi_timer_0_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_timer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_axi_timer_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -413,9 +411,7 @@
     </Run>
     <Run Id="microBlaze_axi_ethernetlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_axi_ethernetlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_ethernetlite_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_axi_ethernetlite_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -424,9 +420,7 @@
     </Run>
     <Run Id="microBlaze_axi_smc_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_axi_smc_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_smc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_axi_smc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -435,9 +429,7 @@
     </Run>
     <Run Id="microBlaze_rst_mig_7series_0_81M_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_rst_mig_7series_0_81M_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_rst_mig_7series_0_81M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_rst_mig_7series_0_81M_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -446,9 +438,7 @@
     </Run>
     <Run Id="microBlaze_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_xbar_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -457,9 +447,7 @@
     </Run>
     <Run Id="microBlaze_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_microblaze_0_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_microblaze_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -468,9 +456,7 @@
     </Run>
     <Run Id="microBlaze_microblaze_0_axi_intc_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_microblaze_0_axi_intc_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_microblaze_0_axi_intc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -479,9 +465,7 @@
     </Run>
     <Run Id="microBlaze_mig_7series_0_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_mig_7series_0_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_mig_7series_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_mig_7series_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -490,9 +474,7 @@
     </Run>
     <Run Id="microBlaze_dlmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_dlmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_dlmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -501,9 +483,7 @@
     </Run>
     <Run Id="microBlaze_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_ilmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -512,9 +492,7 @@
     </Run>
     <Run Id="microBlaze_lmb_bram_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_lmb_bram_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_lmb_bram_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_lmb_bram_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -523,9 +501,7 @@
     </Run>
     <Run Id="microBlaze_axi_uartlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_axi_uartlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_uartlite_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_axi_uartlite_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -534,9 +510,7 @@
     </Run>
     <Run Id="microBlaze_mii_to_rmii_0_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_mii_to_rmii_0_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_mii_to_rmii_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_mii_to_rmii_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -545,9 +519,7 @@
     </Run>
     <Run Id="microBlaze_clk_wiz_1_0_synth_1" Type="Ft3:Synth" SrcSet="microBlaze_clk_wiz_1_0" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_clk_wiz_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microBlaze_clk_wiz_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -669,9 +641,7 @@
     </Run>
     <Run Id="microBlaze_axi_timer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_timer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_axi_timer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -687,9 +657,7 @@
     </Run>
     <Run Id="microBlaze_axi_ethernetlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_ethernetlite_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_axi_ethernetlite_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -705,9 +673,7 @@
     </Run>
     <Run Id="microBlaze_axi_smc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_smc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_axi_smc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -723,9 +689,7 @@
     </Run>
     <Run Id="microBlaze_rst_mig_7series_0_81M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_rst_mig_7series_0_81M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_rst_mig_7series_0_81M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -741,9 +705,7 @@
     </Run>
     <Run Id="microBlaze_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -759,9 +721,7 @@
     </Run>
     <Run Id="microBlaze_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_microblaze_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -777,9 +737,7 @@
     </Run>
     <Run Id="microBlaze_microblaze_0_axi_intc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_microblaze_0_axi_intc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -795,9 +753,7 @@
     </Run>
     <Run Id="microBlaze_mig_7series_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_mig_7series_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_mig_7series_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -813,9 +769,7 @@
     </Run>
     <Run Id="microBlaze_dlmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_dlmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -831,9 +785,7 @@
     </Run>
     <Run Id="microBlaze_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -849,9 +801,7 @@
     </Run>
     <Run Id="microBlaze_lmb_bram_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_lmb_bram_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_lmb_bram_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -867,9 +817,7 @@
     </Run>
     <Run Id="microBlaze_axi_uartlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_axi_uartlite_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_axi_uartlite_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -885,9 +833,7 @@
     </Run>
     <Run Id="microBlaze_mii_to_rmii_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_mii_to_rmii_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_mii_to_rmii_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -903,9 +849,7 @@
     </Run>
     <Run Id="microBlaze_clk_wiz_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microBlaze_clk_wiz_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microBlaze_clk_wiz_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

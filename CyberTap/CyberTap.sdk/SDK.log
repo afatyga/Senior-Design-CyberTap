@@ -1,0 +1,212 @@
+16:23:39 INFO  : Registering command handlers for SDK TCF services
+16:23:39 INFO  : Launching XSCT server: xsct.bat -interactive C:\SeniorDesign\CyberTap\CyberTap.sdk\temp_xsdb_launch_script.tcl
+16:23:41 INFO  : XSCT server has started successfully.
+16:23:41 INFO  : Successfully done setting XSCT server connection channel  
+16:23:42 INFO  : Processing command line option -hwspec C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper.hdf.
+16:23:42 INFO  : Successfully done setting SDK workspace  
+16:26:10 INFO  : Refreshed build settings on project echo_server
+16:26:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:26:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:27:00 INFO  : FPGA configured successfully with bitstream "C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit"
+16:28:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:28:36 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292ABF906A' is selected.
+16:28:36 INFO  : 'jtag frequency' command is executed.
+16:28:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:28:38 INFO  : FPGA configured successfully with bitstream "C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit"
+16:28:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:28:39 INFO  : Context for processor 'microblaze_0' is selected.
+16:28:39 INFO  : Processor reset is completed for 'microblaze_0'.
+16:28:39 INFO  : Context for processor 'microblaze_0' is selected.
+16:28:39 INFO  : The application 'C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf' is downloaded to processor 'microblaze_0'.
+16:28:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0
+fpga -file C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+dow C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf
+----------------End of Script----------------
+
+16:28:39 INFO  : Memory regions updated for context PA
+16:28:39 INFO  : Memory regions updated for context PA
+16:28:39 INFO  : Context for processor 'microblaze_0' is selected.
+16:28:39 INFO  : 'con' command is executed.
+16:28:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+con
+----------------End of Script----------------
+
+16:28:39 INFO  : Launch script is exported to file 'C:\SeniorDesign\CyberTap\CyberTap.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_echo_server.elf_on_local.tcl'
+16:32:18 INFO  : Disconnected from the channel tcfchan#1.
+16:32:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:32:20 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292ABF906A' is selected.
+16:32:20 INFO  : 'jtag frequency' command is executed.
+16:32:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:32:22 INFO  : FPGA configured successfully with bitstream "C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit"
+16:32:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:32:22 INFO  : Context for processor 'microblaze_0' is selected.
+16:32:22 INFO  : Processor reset is completed for 'microblaze_0'.
+16:32:22 INFO  : Context for processor 'microblaze_0' is selected.
+16:32:23 INFO  : The application 'C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf' is downloaded to processor 'microblaze_0'.
+16:32:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0
+fpga -file C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+dow C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf
+----------------End of Script----------------
+
+16:32:23 INFO  : Memory regions updated for context PA
+16:32:23 INFO  : Memory regions updated for context PA
+16:32:23 INFO  : Context for processor 'microblaze_0' is selected.
+16:32:23 INFO  : 'con' command is executed.
+16:32:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+con
+----------------End of Script----------------
+
+16:32:23 INFO  : Launch script is exported to file 'C:\SeniorDesign\CyberTap\CyberTap.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_echo_server.elf_on_local.tcl'
+16:33:26 INFO  : Disconnected from the channel tcfchan#2.
+16:33:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:33:28 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292ABF906A' is selected.
+16:33:28 INFO  : 'jtag frequency' command is executed.
+16:33:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:33:30 INFO  : FPGA configured successfully with bitstream "C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit"
+16:33:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:33:30 INFO  : Context for processor 'microblaze_0' is selected.
+16:33:30 INFO  : Processor reset is completed for 'microblaze_0'.
+16:33:30 INFO  : Context for processor 'microblaze_0' is selected.
+16:33:31 INFO  : The application 'C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf' is downloaded to processor 'microblaze_0'.
+16:33:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0
+fpga -file C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+dow C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf
+----------------End of Script----------------
+
+16:33:31 INFO  : Memory regions updated for context PA
+16:33:31 INFO  : Memory regions updated for context PA
+16:33:31 INFO  : Context for processor 'microblaze_0' is selected.
+16:33:31 INFO  : 'con' command is executed.
+16:33:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+con
+----------------End of Script----------------
+
+16:33:31 INFO  : Launch script is exported to file 'C:\SeniorDesign\CyberTap\CyberTap.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_echo_server.elf_on_local.tcl'
+16:33:56 INFO  : Disconnected from the channel tcfchan#3.
+16:36:56 INFO  : Registering command handlers for SDK TCF services
+16:36:57 INFO  : Launching XSCT server: xsct.bat -interactive C:\SeniorDesign\CyberTap\CyberTap.sdk\temp_xsdb_launch_script.tcl
+16:36:59 INFO  : XSCT server has started successfully.
+16:36:59 INFO  : Successfully done setting XSCT server connection channel  
+16:36:59 INFO  : Processing command line option -hwspec C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper.hdf.
+16:36:59 INFO  : Successfully done setting SDK workspace  
+16:36:59 INFO  : Checking for hwspec changes in the project microBlaze_wrapper_hw_platform_0.
+16:37:01 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573335351318,  Project:1572803351884
+16:37:01 INFO  : The hardware specification for project 'microBlaze_wrapper_hw_platform_0' is different from C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper.hdf.
+16:37:01 INFO  : Copied contents of C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper.hdf into \microBlaze_wrapper_hw_platform_0\system.hdf.
+16:37:02 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:37:06 INFO  : 
+16:37:07 INFO  : Updating hardware inferred compiler options for echo_server.
+16:37:07 INFO  : Clearing existing target manager status.
+16:37:29 INFO  : Refreshed build settings on project echo_server
+16:40:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:40:05 INFO  : FPGA configured successfully with bitstream "C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit"
+16:40:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:40:24 INFO  : 'fpga -state' command is executed.
+16:40:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:25 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292ABF906A' is selected.
+16:40:25 INFO  : 'jtag frequency' command is executed.
+16:40:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:40:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:40:25 INFO  : Processor reset is completed for 'microblaze_0'.
+16:40:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:40:25 INFO  : The application 'C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf' is downloaded to processor 'microblaze_0'.
+16:40:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+dow C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf
+----------------End of Script----------------
+
+16:40:26 INFO  : Context for processor 'microblaze_0' is selected.
+16:40:26 INFO  : 'con' command is executed.
+16:40:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+con
+----------------End of Script----------------
+
+16:40:26 INFO  : Disconnected from the channel tcfchan#1.
+16:40:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:40:59 INFO  : 'fpga -state' command is executed.
+16:40:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:59 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292ABF906A' is selected.
+16:40:59 INFO  : 'jtag frequency' command is executed.
+16:40:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:41:00 INFO  : Context for processor 'microblaze_0' is selected.
+16:41:00 INFO  : Processor reset is completed for 'microblaze_0'.
+16:41:00 INFO  : Context for processor 'microblaze_0' is selected.
+16:41:01 INFO  : The application 'C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf' is downloaded to processor 'microblaze_0'.
+16:41:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+dow C:/SeniorDesign/CyberTap/CyberTap.sdk/echo_server/Debug/echo_server.elf
+----------------End of Script----------------
+
+16:41:02 INFO  : Context for processor 'microblaze_0' is selected.
+16:41:02 INFO  : 'con' command is executed.
+16:41:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+con
+----------------End of Script----------------
+
+16:41:02 INFO  : Disconnected from the channel tcfchan#2.
+16:43:55 INFO  : Refreshed build settings on project ECHOPLSWORKFFS
+16:46:16 INFO  : Refreshed build settings on project echoserv
+16:48:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:48:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:48:12 INFO  : FPGA configured successfully with bitstream "C:/SeniorDesign/CyberTap/CyberTap.sdk/microBlaze_wrapper_hw_platform_0/download.bit"
+16:49:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A" && level==0} -index 0' command is executed.
+16:49:07 INFO  : 'fpga -state' command is executed.
+16:49:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:49:08 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292ABF906A' is selected.
+16:49:08 INFO  : 'jtag frequency' command is executed.
+16:49:08 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:49:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:49:08 INFO  : Processor reset is completed for 'microblaze_0'.
+16:49:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:49:09 INFO  : The application 'C:/SeniorDesign/CyberTap/CyberTap.sdk/echoserv/Debug/echoserv.elf' is downloaded to processor 'microblaze_0'.
+16:49:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+dow C:/SeniorDesign/CyberTap/CyberTap.sdk/echoserv/Debug/echoserv.elf
+----------------End of Script----------------
+
+16:49:09 INFO  : Memory regions updated for context PA
+16:49:09 INFO  : Memory regions updated for context PA
+16:49:09 INFO  : Context for processor 'microblaze_0' is selected.
+16:49:09 INFO  : 'con' command is executed.
+16:49:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -100T 210292ABF906A"} -index 0
+con
+----------------End of Script----------------
+
+16:49:09 INFO  : Launch script is exported to file 'C:\SeniorDesign\CyberTap\CyberTap.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_echoserv.elf_on_local.tcl'

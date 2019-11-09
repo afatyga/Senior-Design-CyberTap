@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='X:/My Documents/SeniorDesign/CyberTap/CyberTap.runs/impl_1'
+HD_PWD='C:/SeniorDesign/CyberTap/CyberTap.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log microBlaze_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source microBlaze_wrapper.tcl -notrace
 
 
