@@ -3,6 +3,9 @@
 #include <sys/socket.h>
 #include <stdlib.h>
 #include <netinet/in.h>
+#include <unistd.h>
+#include <time.h>
+
 
 #define PORT 8080       //required for socaddr_in
 
@@ -45,4 +48,44 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
+    //this segment sends a value every second to the client
+    //used to test if fpga can correctly read values without missing data
+    
+    int j, i = 0;
+    int iters = 0;
+    
+    
+    size_t val_len = 3;
+    char *val1 = "123";
+    char *val2 = "803";
+    char *val3 = "924";
+    char *val4 = "543";
+    char *temp;
+
+    srand(time(0));
+
+    temp = malloc(3*sizeof(char));
+
+    while(1) {
+        
+        send(new_soc, val1, 3, 0);
+        printf("Message #%d\n", iters);
+        sleep(1);
+        
+        i++;
+        iters++;
+    
+        //BRUTE setup to send different strings randomly
+        i = rand() % 4;
+        if (i == 0) {
+            temp = val1;
+        } else if(i == 1) {
+            temp = val2;
+        } else if(i == 2) {
+            temp = val3;
+        } else if (i == 3) {
+            temp = val4;
+        }
+        
+    }
 }

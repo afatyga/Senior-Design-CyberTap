@@ -27,7 +27,19 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    //send whaterver
+    char * buffer; 
+    char result;
+    int iters = 0;
+    size_t len = 3;
 
+    buffer = malloc(3*sizeof(char));
+    
+    //send whaterver
+    while(1) {
+        printf("Recieved message %d\n", iters);
+        result = read(soc, buffer, len);
+        printf("%s\n", buffer);
+    }
+    
     return 0;
 }
