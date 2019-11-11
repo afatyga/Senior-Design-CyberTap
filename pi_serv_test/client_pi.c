@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 
     buffer = malloc(3*sizeof(char));
     
-    //send whaterver
+    //Continously reads from soc and printfs out the message number and result
     while(1) {
         printf("Recieved message %d\n", iters);
         result = read(soc, buffer, len);
