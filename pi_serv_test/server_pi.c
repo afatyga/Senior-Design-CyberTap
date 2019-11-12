@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
 
     while(1) {
         
-        send(new_soc, val1, 3, 0);
+        send(new_soc, temp, 3, 0);
         printf("Message #%d\n", iters);
         sleep(1);
         
