@@ -41,7 +41,7 @@ th, td {
 	<header>
 	<h1 align = "center">Network Monitoring</h1>
 	</header>
-
+<script src ="/socket.io/socket.io.js"></script>
 <input type="text" id="myInput1" onkeyup="myFunction()" placeholder="Search for protocols..">
 <input type="text" id="myInput2" onkeyup="myFunction()" placeholder="Search for sources..">
 <input type="text" id="myInput3" onkeyup="myFunction()" placeholder="Search for destinations..">
@@ -60,145 +60,41 @@ th, td {
   </tr>
 </thead>
 <tbody>
-  <tr>
-    <td>700</td>
-    <td>12:01:00</td>
-    <td>192.168.1.123</td>
-    <td>192.168.1.195</td>
-    <td>DNS</td>
-    <td>121</td>
-    <td>Other</td>    
-  </tr>
-  <tr>
-    <td>701</td>
-    <td>12:01:04</td>
-    <td>192.168.1.195</td>
-    <td>192.168.1.123</td>
-    <td>DNS</td>
-    <td>142</td>
-    <td>Query..</td> 
-  </tr>
-  <tr>
-    <td>702</td>
-    <td>12:01:05</td>
-    <td>127.1.143.7</td>
-    <td>192.168.0.21</td>
-    <td>TCP</td>
-    <td>431</td>
-    <td>Other</td> 
-  </tr>
-  <tr>
-    <td>703</td>
-    <td>12:01:08</td>
-    <td>192.168.1.113</td>
-    <td>192.168.1.151</td>
-    <td>DNS</td>
-    <td>129</td>
-    <td>Other</td>    
-  </tr>
-  <tr>
-    <td>704</td>
-    <td>12:01:12</td>
-    <td>192.168.1.111</td>
-    <td>192.168.1.144</td>
-    <td>HTTP</td>
-    <td>162</td>
-    <td>Query..</td> 
-  </tr>
-  <tr>
-    <td>705</td>
-    <td>12:01:14</td>
-    <td>127.1.142.9</td>
-    <td>192.168.0.24</td>
-    <td>DNS</td>
-    <td>411</td>
-    <td>Other</td> 
-  </tr>
-    <tr>
-    <td>706</td>
-    <td>12:01:15</td>
-    <td>192.168.1.682</td>
-    <td>192.168.1.244</td>
-    <td>TCP</td>
-    <td>114</td>
-    <td>Other</td>    
-  </tr>
-  <tr>
-    <td>707</td>
-    <td>12:01:16</td>
-    <td>192.168.1.595</td>
-    <td>192.168.1.531</td>
-    <td>TCP</td>
-    <td>142</td>
-    <td>Query..</td> 
-  </tr>
-  <tr>
-    <td>708</td>
-    <td>12:01:18</td>
-    <td>127.1.199.7</td>
-    <td>192.168.0.21</td>
-    <td>DNS</td>
-    <td>439</td>
-    <td>Other</td> 
-  </tr>
-    <tr>
-    <td>709</td>
-    <td>12:01:21</td>
-    <td>192.128.1.193</td>
-    <td>192.168.1.411</td>
-    <td>HTTP</td>
-    <td>151</td>
-    <td>Other</td>    
-  </tr>
-  <tr>
-    <td>710</td>
-    <td>12:01:25</td>
-    <td>192.189.1.195</td>
-    <td>192.114.1.131</td>
-    <td>TCP</td>
-    <td>142</td>
-    <td>Query..</td> 
-  </tr>
-  <tr>
-    <td>711</td>
-    <td>12:01:27</td>
-    <td>127.1.128.1</td>
-    <td>192.168.0.14</td>
-    <td>HTTP</td>
-    <td>419</td>
-    <td>Other</td> 
-  </tr>
 </tbody>
 </table>
 </body>
 </head>
 
 <script>
-/*
-var rowNum = 0;
-//socket.on('csvData', function(data){  //always have our socket open and get those
-var table = document.getElementById("demo");  //how to add to the table
-var row = table.insertRow(rowNum);
-
-var cell1 = row.insertCell(0);
-var cell2 = row.insertCell(1);
-var cell3 = row.insertCell(2);
-var cell4 = row.insertCell(3);
-var cell5 = row.insertCell(4);
-var cell6 = row.insertCell(5);
-var cell7 = row.insertCell(6);
+var socket = io.connect();
+var rowNum = 1;
+socket.on('message', function(data){  //always have our socket open and get those
+var msg = data.message;
+if (msg.length > 2 && msg != ""){
+  var table = document.getElementById("demo");  //how to add to the table
+  var row = table.insertRow(rowNum);
+  var today = new Date();
+  var time = today.toLocaleTimeString();
+  //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
 
 // Add some text to the new cells:
-cell1.innerHTML = data.csv[0];
-cell2.innerHTML = data.csv[1];
-cell3.innerHTML = data.csv[2];
-cell4.innerHTML = data.csv[3];
-cell5.innerHTML = data.csv[4];
-cell6.innerHTML = data.csv[5];
-cell7.innerHTML = data.csv[6];
-rowNum++;
-
-//}); */
+  cell1.innerHTML = rowNum;//data.csv[0];
+  cell2.innerHTML = time;//data.csv[1];
+  cell3.innerHTML = "192.168.1.30";//data.csv[2];
+  cell4.innerHTML = "192.168.1.10";//data.csv[3];
+  cell5.innerHTML = "TCP";//data.csv[4];
+  cell6.innerHTML = msg.length - 3;//data.csv[5];
+  cell7.innerHTML = msg;// data.csv[6];
+  rowNum++;
+  }
+}); 
 
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue, input2, input3, txtValue2, txtValue3, filter2, filter3, td2, td3;
