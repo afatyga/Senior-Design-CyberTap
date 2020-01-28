@@ -38,9 +38,8 @@ int main(int argc, char *argv[]) {
     while(1) {
         printf("Recieved message %d\n", iters);
         result = read(soc, buffer, len);
-        printf("%x%x%x\n", buffer[0], buffer[1], buffer[2]);
+        printf("%s\n", buffer);
 	//	free(buffer);
-	iters++;
     }
     
     return 0;

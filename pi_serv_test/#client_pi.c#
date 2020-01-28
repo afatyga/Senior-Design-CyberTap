@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(PORT);
 
-    if(inet_pton(AF_INET, "169.254.61.71", &serv_addr.sin_addr) <=0){
+    if(inet_pton(AF_INET, "128.197.180.243", &serv_addr.sin_addr) <=0){
         perror("Invalid address");
         exit(1);
     }
@@ -38,9 +38,8 @@ int main(int argc, char *argv[]) {
     while(1) {
         printf("Recieved message %d\n", iters);
         result = read(soc, buffer, len);
-        printf("%x%x%x\n", buffer[0], buffer[1], buffer[2]);
+        printf("%s\n", buffer);
 	//	free(buffer);
-	iters++;
     }
     
     return 0;

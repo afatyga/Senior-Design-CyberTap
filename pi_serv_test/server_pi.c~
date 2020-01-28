@@ -18,8 +18,8 @@ int main(int argc, char *argv[]) {
     opt = 1;
 
     //create socket
-    if ((serv_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
-    //if ((serv_fd = socket(AF_PACKET, SOCK_RAW, htons(ETH_P_ALL)))){
+    //if ((serv_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
+    if ((serv_fd = socket(AF_PACKET, SOCK_RAW, htons(ETH_P_ALL)))){
         perror("Failure to set socket");
         exit(1);
     }
