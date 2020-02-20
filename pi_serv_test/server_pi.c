@@ -51,20 +51,22 @@ int main(int argc, char *argv[]) {
     //this segment sends a value every second to the client
     //used to test if fpga can correctly read values without missing data
     
-    int j, i = 0;
+    int j, i, idk = 0;
     int iters = 0;
     
     
     size_t val_len = 3;
-    char *val1 = "123";
+    char val[5];
+    /*
     char *val2 = "803";
     char *val3 = "924";
     char *val4 = "543";
     char *temp;
-
+	*/
+	char* temp;
     srand(time(0));
 
-    temp = malloc(3*sizeof(char));
+    temp = malloc(4*sizeof(char));
 
     while(1) {
         
@@ -76,7 +78,13 @@ int main(int argc, char *argv[]) {
         iters++;
     
         //BRUTE setup to send different strings randomly
-        i = rand() % 4;
+        val = rand(0xffffff);
+        (char*)(&val + 3) = NULL; // terminate
+        *temp = *((char*)(&val));
+        *(temp+1) = *((char*)(&val)+1);
+        *(temp+2) = *((char*)(&val)+2);
+        
+        /*
         if (i == 0) {
             temp = val1;
         } else if(i == 1) {
@@ -86,6 +94,7 @@ int main(int argc, char *argv[]) {
         } else if (i == 3) {
             temp = val4;
         }
-        
+        */
+        temp = val;
     }
 }
