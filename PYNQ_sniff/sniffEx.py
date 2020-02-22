@@ -1,6 +1,8 @@
 import numpy as np
+import datetime
 import sys
 sys.path.insert(1,'/home/xilinx/jupyter_notebooks/pynq')
+sys.path.insert(1,'home/xilinx/pynq/lib')
 from pynq import Overlay
 import buffer
 from collections import Counter
@@ -43,9 +45,9 @@ def ex_parse(packet):  #function to just print out will be replaced
 #         else:
 
         with open(r'packets.csv', mode='a') as packet_file:
-                data_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S') #Alex stole noahs commit
                 packet_writer = csv.writer(packet_file)
-                packet_writer.writerow([data_str,src, dst, proto, pktLength, 'no'])
+                packet_writer.writerow([time_str,src, dst, proto, pktLength, 'no'])
 
 
 
