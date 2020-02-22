@@ -12,6 +12,15 @@ import modbusParse
 ## Create a Packet Counter
 packet_counts = Counter()
 
+
+def start_csv():
+    with open('packets.csv', mode='w') as packet_file:
+       
+        packet_writer = csv.writer(packet_file)
+
+        packet_writer.writerow(['Time','Source', 'Dest', 'Protocol', 'Length', 'Info'])
+
+
     ## Define our Custom Action function
 def ex_parse(packet):  #function to just print out will be replaced
     # Create tuple of Src/Dst in sorted order
@@ -32,10 +41,20 @@ def ex_parse(packet):  #function to just print out will be replaced
 #             return (f"Packet #{sum(packet_counts.values())}:" + str(packet[0][1].summary())+"\n" + "PAYLOAD: " 
 #                     + packet[0][1].payload + "\n")
 #         else:
+
+        with open(r'packets.csv', mode='a') as packet_file:
+                data_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                packet_writer = csv.writer(packet_file)
+                packet_writer.writerow([data_str,src, dst, proto, pktLength, 'no'])
+
+
+
         return (f"Packet #{sum(packet_counts.values())}:" + str(packet[0][1].summary())+"\n\n")
 
 def sniffing():
     print("start")
+    start_csv()
+    print("csv started")    
     while(1):
         try:
             
