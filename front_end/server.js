@@ -3,17 +3,21 @@ var http = require('http');
 var fs = require('fs');
 var io = require('socket.io');  
 
-var server = http.createServer(function(request, response){
-	var path = url.parse(request.url).pathname;
+const filepath = '/home/xilinx/jupyter_notebooks/CyberTap_soft/packets.csv' //file path of csv file
+const csv = require('csv-parser');
+const obj = require('csv');
 
-    switch(path){
+var server = http.createServer(function(request, response){
+    var path2 = url.parse(request.url).pathname;
+
+    switch(path2){
         case '/':
             response.writeHead(200, {'Content-Type': 'text/html'});
             response.write('hello world');
             response.end();
             break;
         case '/main.html':
-            fs.readFile(__dirname + path, function(error, data){
+            fs.readFile(__dirname + path2, function(error, data){
                 if (error){
                     response.writeHead(404);
                     response.write("opps this doesn't exist - 404");
@@ -33,29 +37,25 @@ var server = http.createServer(function(request, response){
             break;
     }
 });
-server.listen(8001);
-/*
-var listener = io.listen(server)
-listener.sockets.on('connection',function(socket){
-obj.from.path('test.csv').to.array(function (data) {
-    console.log(data)
-    for (var index = 0; index < data.length; index++) {
-        var csvData = []
-        csvData.push(data[index][0], data[index][1], data[index][2], data[index][3], data[index][4], data[index][5], data[index][6])
-        socket.emit('csv', {'csv': csvData});
-        console.log("emitted")
-    }
-});
+server.listen(8080);
 
-   // fs.readFile('test.txt', 'utf8', function(err, contents) {
 
-});
-
-var listener = io.listen(server); //socket io stuff if we decide on this
+var listener = io.listen(server);
 listener.sockets.on('connection', function(socket){
+    fs.createReadStream('/home/xilinx/jupyter_notebooks/CyberTap_soft/packets.csv')
+    .pipe(csv())
+    .on('data', function(data){
+        try{
+            //console.log("Name is" + data.Source);
+            socket.emit('message', {'message': data.Info, 'src': data.Source, 'dest': data.Dest, 'protocol': data.Protocol, 'length' : data.Length, 'time': data.Time} );
+        }
+        catch(err){
+        }
+    })
+    .on('end',function(){
+    
+    });
+        
 
-    	socket.emit('message', {'message': data});	//emits what we want to send to the html
 
-});
-
-*/
+})
