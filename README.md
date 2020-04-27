@@ -27,5 +27,4 @@ Justin is a Computer Engineering major that has taken classes such as Smart and 
 
 # GitHub Info
 PYNQ_sniff holds all files that we run on the PYNQ and is the most up to date <br>
-front_end holds a slightly out of date version of our web app which will soon be removed and the updated version will be placed in PYNQ_sniff <br>
 front_end holds server.js and main.html which is the web application. server.js reads in the csv file and uses socket io to send it over to main.html to be added to the table
