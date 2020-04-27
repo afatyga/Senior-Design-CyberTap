@@ -33,27 +33,27 @@ front_end holds server.js and main.html which is the web application. server.js 
 After the work completed in the second semester, the group has proposed the following plan to complete the project:
 
 Task 1. Prepare for Long Term Use.
-After parsing a packet, the packet is written into a CSV file that the web application is able to read from. Currently, this file is only written to and only emptied on start up. Consequently, writing to the CSV will have to be modified. The CSV file will need to also be used for the data storage. The following milestones will complete the necessary steps to have a system prepared for long term use:
-Milestone 1: Test to decide the period of time it takes for the CSV file to become half full.
-Milestone 2: Modify writing to CSV to empty file after this period of time.
+After parsing a packet, the packet is written into a CSV file that the web application is able to read from. Currently, this file is only written to and only emptied on start up. Consequently, writing to the CSV will have to be modified. The CSV file will need to also be used for the data storage. The following milestones will complete the necessary steps to have a system prepared for long term use:<br/>
+  Milestone 1: Test to decide the period of time it takes for the CSV file to become half full.<br/>
+  Milestone 2: Modify writing to CSV to empty file after this period of time.
 
 
 Task 2. Web Application Improvements.
-The web application can be improved in various ways to allow the user a better viewing experience. These simple modifications will greatly increase the usability of the application.The first improvement would be to introduce auto refreshing into the web app. This would be done in the front end and is a relatively easy addition. The second improvement would be to have new packets show in the top of the table rather than at the bottom. This means that newer packets are at the top and older packets are at the bottom. This addition would also be relatively easy and would be done by modifying the front end. The following milestones will complete the necessary web application improvements:
-Milestone 1: Auto refresh each second.
-Milestone 2: Modify front end to add new packets to the top of the table.
+The web application can be improved in various ways to allow the user a better viewing experience. These simple modifications will greatly increase the usability of the application.The first improvement would be to introduce auto refreshing into the web app. This would be done in the front end and is a relatively easy addition. The second improvement would be to have new packets show in the top of the table rather than at the bottom. This means that newer packets are at the top and older packets are at the bottom. This addition would also be relatively easy and would be done by modifying the front end. The following milestones will complete the necessary web application improvements:<br/>
+  Milestone 1: Auto refresh each second.<br/>
+  Milestone 2: Modify front end to add new packets to the top of the table.
 
 
 Task 3. Hardware Packet Parsing.
-Although software packet parsing was completed and had great performance, hardware packet parsing would be even greater. In terms of hardware parsing, Xilinx SDnet software was being procured from Boston University. This software would have enabled easy production of the parsing modules. These modules would then have been integrated into the python overlay of the PYNQ board and used as a replacement for the current software parsing system. This would significantly increase the maximum bandwidth the Cybertap would be able to handle. The following milestones will allow for the creation of a hardware parsing system:
-Milestone 1: Create a hardware parsing module for one packet type in Xilinx SDnet.
-Milestone 2: Integrate the parsing module into the PYNQ-Z1’s python overlay system.
-Milestone 3: Create multiple parsing modules and a system for switching between the different modules for different packet types in the PYNQ-Z1.
+Although software packet parsing was completed and had great performance, hardware packet parsing would be even greater. In terms of hardware parsing, Xilinx SDnet software was being procured from Boston University. This software would have enabled easy production of the parsing modules. These modules would then have been integrated into the python overlay of the PYNQ board and used as a replacement for the current software parsing system. This would significantly increase the maximum bandwidth the Cybertap would be able to handle. The following milestones will allow for the creation of a hardware parsing system:<br/>
+  Milestone 1: Create a hardware parsing module for one packet type in Xilinx SDnet.<br/>
+  Milestone 2: Integrate the parsing module into the PYNQ-Z1’s python overlay system.<br/>
+  Milestone 3: Create multiple parsing modules and a system for switching between the different modules for different packet types in the   PYNQ-Z1.
 
 
 Task 4. Simplifying Setup and Startup.
-The current setup of the system would include plugging in the FPGA and downloading NodeJS, multiple other packages and the web application code from the group’s GitHub repo. Simple steps would greatly simplify this process and allow for a better ease of use. A batch file would be created that would set up the web application and install NodeJS as well as many npm packages. Another batch file would be created for web application startup and would include running the main javascript file. Then, the GitHub must be updated with a zip file of all necessary files and instructions in the readme for the user to follow. The following milestones will allow for a more simplified setup and startup:
-Milestone 1: Complete a batch file for setup. 
-Milestone 2: Complete a batch file for startup.
-Milestone 3: Add instructions to GitHub.
+The current setup of the system would include plugging in the FPGA and downloading NodeJS, multiple other packages and the web application code from the group’s GitHub repo. Simple steps would greatly simplify this process and allow for a better ease of use. A batch file would be created that would set up the web application and install NodeJS as well as many npm packages. Another batch file would be created for web application startup and would include running the main javascript file. Then, the GitHub must be updated with a zip file of all necessary files and instructions in the readme for the user to follow. The following milestones will allow for a more simplified setup and startup:<br/>
+  Milestone 1: Complete a batch file for setup. <br/>
+  Milestone 2: Complete a batch file for startup.<br/>
+  Milestone 3: Add instructions to GitHub.
 
