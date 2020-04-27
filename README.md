@@ -8,6 +8,9 @@ CyberTap is a high throughput hardware network tap designed for industrial contr
 In order to get CyberTap up and running, first configure a SPAN port on the desired network switch. This is the port that CyberTap will be connected to. Next, plug the PYNQ into a computer via microUSB-USB connection and plug in the power plug, and connect to the SPAN port via ethernet, and then switch on the power switch.
 
 # How It Works Diagram
+<p align="center">
+<img src="./how-it-works.png" width="55%" />
+</p>
 
 # Who Are We? The History of CyberTap.
 In the summer of 2019, Felipe Dale Figeman asked his employers at Cybereason if they had an idea for a year long project. Thus, CyberTap was born. The group formed and agreed to build a hardware based network tap. <br> <br>
